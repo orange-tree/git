@@ -19,4 +19,4 @@ git push -u origin master    第一次推送内容
 git push origin master    推送内容
 
 
-git clone git@github.com:michaelliao/gitskills.git    克隆一个本地库
+git clone git@github.com:orange-tree/git.git    克隆一个本地库
