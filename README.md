@@ -12,7 +12,7 @@ git commit -m <message>    提交到仓库
 
 
 
-git remote add origin git@github.com:michaelliao/learngit.git    本地关联远程仓库
+git remote add origin git@github.com:orange-tree/git.git    本地关联远程仓库
 
 git push -u origin master    第一次推送内容
 
