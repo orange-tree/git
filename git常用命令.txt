@@ -6,17 +6,44 @@ ssh-keygen -t rsa -C "youremail@example.com"    创建SSH Key
 
 
 
-git add <file>    添加到暂存区
+git add <file.txt>    添加指定文件到暂存区
+git add .    添加所有已修改到暂存区
 
-git commit -m <message>    提交到仓库
+git commit -m "<message>"    提交到仓库
+
+git status    查看仓库当前状态
+
+git log    查看提交日志
+
+git log --pretty=oneline    查看提交日志
+
+git reset --hard HEAD^		回退到上一个版本
+git reset --hard HEAD^^		回退到上上个版本
+git reset --hard HEAD~100		回退到上100个版本
+git reset --hard e475af		回退到指定版本
+
+git reflog		查看执行过的命令
+
+git branch		查看所有分支
+
+git branch dev		创建一个叫dev的分支
+git checkout dev		切换到dev分支
+git checkout -b dev		创建并切换到dev分支
+
+git merge dev		合并dev分支到当前分支
+
+git branch -d dev		删除dev分支
 
 
+github远程
 
-git remote add origin git@github.com:michaelliao/learngit.git    本地关联远程仓库
+git clone git@github.com:orange-tree/orange-tree.git    克隆远程仓库到当前文件夹
 
-git push -u origin master    第一次推送内容
+git remote add origin git@github.com:orange-tree/orange-tree.git    本地关联远程仓库
+git remote set-url origin git@github.com:orange-tree/orange-tree.git    修改远程仓库地址
 
-git push origin master    推送内容
+git push -u origin master    推送内容并指定默认分支
 
+git push	推送内容到默认分支
 
-git clone git@github.com:michaelliao/gitskills.git    克隆一个本地库
+git push origin master    推送内容到指定分支
