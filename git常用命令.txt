@@ -2,7 +2,7 @@ git config --global user.name "your name"
 
 git config --global user.email "email@example.com"
 
-ssh-keygen -t rsa -C "youremail@example.com"    创建SSH Key
+ssh-keygen -t rsa -C "youremail@example.com"			创建SSH Key
 
 
 
@@ -11,13 +11,13 @@ git init			在当前文件夹创建git仓库
 git add file.txt			添加file.txt文件到暂存区
 git add .					添加所有已修改到暂存区
 
-git commit -m "本次提交的说明"    		提交到仓库
+git commit -m "本次提交的说明"			提交到仓库
 
 git status			查看仓库当前状态
 
-git log    									查看提交日志
-git log --pretty=oneline    				查看提交日志
-git log --pretty=oneline --abbrev-commit    查看提交日志
+git log										查看提交日志
+git log --pretty=oneline					查看提交日志
+git log --pretty=oneline --abbrev-commit	查看提交日志
 
 git reflog			查看执行过的命令
 
@@ -71,3 +71,18 @@ git remote set-url origin git@github.com:orange-tree/orange-tree.git		修改远�
 git push -u origin master		推送内容并指定master为默认分支
 git push						推送内容到默认分支
 git push origin master			推送内容到master分支
+
+git pull						从默认分支拉取内容
+git pull origin master			从master分支拉取内容
+
+
+
+
+
+
+
+
+
+
+
+
