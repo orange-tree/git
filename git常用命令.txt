@@ -6,44 +6,68 @@ ssh-keygen -t rsa -C "youremail@example.com"    创建SSH Key
 
 
 
-git add <file.txt>    添加指定文件到暂存区
-git add .    添加所有已修改到暂存区
+git init			在当前文件夹创建git仓库
 
-git commit -m "<message>"    提交到仓库
+git add file.txt			添加file.txt文件到暂存区
+git add .					添加所有已修改到暂存区
 
-git status    查看仓库当前状态
+git commit -m "本次提交的说明"    		提交到仓库
 
-git log    查看提交日志
+git status			查看仓库当前状态
 
-git log --pretty=oneline    查看提交日志
+git log    									查看提交日志
+git log --pretty=oneline    				查看提交日志
+git log --pretty=oneline --abbrev-commit    查看提交日志
 
-git reset --hard HEAD^		回退到上一个版本
-git reset --hard HEAD^^		回退到上上个版本
-git reset --hard HEAD~100		回退到上100个版本
-git reset --hard e475af		回退到指定版本
+git reflog			查看执行过的命令
 
-git reflog		查看执行过的命令
+git reset --hard HEAD^				回退到上一个版本
+git reset --hard HEAD^^				回退到上上个版本
+git reset --hard HEAD~100			回退到上100个版本
+git reset --hard e475af				回退到指定版本
 
-git branch		查看所有分支
 
-git branch dev		创建一个叫dev的分支
+
+分支
+
+git branch			查看所有分支
+
+git branch dev			创建一个叫dev的分支
 git checkout dev		切换到dev分支
 git checkout -b dev		创建并切换到dev分支
 
-git merge dev		合并dev分支到当前分支
+git merge dev		把dev分支合并到当前分支
 
 git branch -d dev		删除dev分支
 
 
+
+标签
+
+git tag			查看所有标签
+
+git tag v1.0											在当前版本创建一个叫 v1.0 的标签
+git tag v1.0 af35ff9									在指定版本创建一个叫 v1.0 的标签
+git tag -a v1.0 -m "version 0.1 released" af35ff9		在指定版本创建一个叫 v1.0 的标签并添加说明文字
+
+git show v1.0			查看标签信息
+
+git push origin v1.0		推送v1.0标签到远程
+git push origin --tags		推送全部标签到远程
+
+git tag -d v1.0			删除标签
+
+git push origin :refs/tags/v1.0			删除一个远程标签
+
+
+
 github远程
 
-git clone git@github.com:orange-tree/orange-tree.git    克隆远程仓库到当前文件夹
+git clone git@github.com:orange-tree/orange-tree.git			克隆远程仓库到当前文件夹
 
-git remote add origin git@github.com:orange-tree/orange-tree.git    本地关联远程仓库
-git remote set-url origin git@github.com:orange-tree/orange-tree.git    修改远程仓库地址
+git remote add origin git@github.com:orange-tree/orange-tree.git			本地关联远程仓库
+git remote set-url origin git@github.com:orange-tree/orange-tree.git		修改远程仓库地址
 
-git push -u origin master    推送内容并指定默认分支
-
-git push	推送内容到默认分支
-
-git push origin master    推送内容到指定分支
+git push -u origin master		推送内容并指定master为默认分支
+git push						推送内容到默认分支
+git push origin master			推送内容到master分支
