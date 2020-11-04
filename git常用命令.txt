@@ -1,15 +1,14 @@
-git config --global user.name "your name"
-
-git config --global user.email "email@example.com"
-
 ssh-keygen -t rsa -C "youremail@example.com"			创建SSH Key
 
+git config --global user.name "your name"
+git config --global user.email "email@example.com"
 
 
-git init			在当前文件夹创建git仓库
+git init			在当前文件夹初始化（创建）空的git仓库
 
 git add file.txt			添加file.txt文件到暂存区
 git add .					添加所有已修改到暂存区
+git add -A					添加所有已修改和已删除到暂存区
 
 git commit -m "本次提交的说明"			提交到仓库
 
@@ -67,6 +66,7 @@ git clone git@github.com:orange-tree/orange-tree.git			克隆远程仓库到当�
 
 git remote add origin git@github.com:orange-tree/orange-tree.git			本地关联远程仓库
 git remote set-url origin git@github.com:orange-tree/orange-tree.git		修改远程仓库地址
+git remote set-url --add origin git@github.com:orange-tree/orange-tree.git	添加多个远程仓库地址
 
 git push -u origin master		推送内容并指定master为默认分支
 git push						推送内容到默认分支
@@ -74,15 +74,3 @@ git push origin master			推送内容到master分支
 
 git pull						从默认分支拉取内容
 git pull origin master			从master分支拉取内容
-
-
-
-
-
-
-
-
-
-
-
-
